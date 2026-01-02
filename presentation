@@ -1,0 +1,78 @@
+from pptx import Presentation
+from pptx.util import Inches, Pt
+
+def create_presentation():
+    prs = Presentation()
+
+    # Slide 1: Title Slide
+    slide_layout = prs.slide_layouts[0] # Title Slide
+    slide = prs.slides.add_slide(slide_layout)
+    title = slide.shapes.title
+    subtitle = slide.placeholders[1]
+    title.text = "The Unified Theory of Everything Flow"
+    subtitle.text = "Love-OS: Reading the Universe through Energy and Information Flow\n\nLove.os 2026"
+
+    # Slide 2: The Field (Unified Field Equation)
+    slide_layout = prs.slide_layouts[1] # Title and Content
+    slide = prs.slides.add_slide(slide_layout)
+    title = slide.shapes.title
+    content = slide.placeholders[1]
+    title.text = "1. Expansion to Field Theory"
+    content.text = (
+        "Redefining Love (V) as a Field in Spacetime.\n\n"
+        "The Unified Equation:\n"
+        "I(x,t) = V(x,t) / R(x,t) + η(x,t)\n\n"
+        "• x (Spatial Coordinate): V and R differ by location (Himeji, Office, Home).\n"
+        "• t (Time): Flow depends on timing and rendering lag.\n"
+        "• Locality: Flow starts from 'Hotspots' (High V/Low R)."
+    )
+
+    # Slide 3: Conservation Laws (Energy)
+    slide = prs.slides.add_slide(slide_layout)
+    title = slide.shapes.title
+    content = slide.placeholders[1]
+    title.text = "2. Conservation of Love-Energy"
+    content.text = (
+        "Physics Proof: 'Love is never wasted.'\n\n"
+        "Continuity Equation:\n"
+        "∂U/∂t + ∇・J = 0\n\n"
+        "• U (Potential): Love stored as internal energy when not flowing.\n"
+        "• J (Flow): Visible manifestation.\n"
+        "• Phase Shift: Accumulated U leads to Evolution (Explosion of Flow)."
+    )
+
+    # Slide 4: Quantum Noise & Prayer (The Miracle)
+    slide = prs.slides.add_slide(slide_layout)
+    title = slide.shapes.title
+    content = slide.placeholders[1]
+    title.text = "3. Quantum Noise & Imaginary Rotation"
+    content.text = (
+        "Why we need 'Laughter' and 'Prayer'.\n\n"
+        "• Noise (η ~ |ψ|²): Fluctuations create miracles and humor.\n"
+        "• Imaginary Rotation: Thoughts (Imaginary axis) rotate to Reality (Real axis).\n"
+        "• The Prayer Equation: I = (V * A) / R\n"
+        "  (When R -> 0, Superconductivity occurs = Miracle)"
+    )
+
+    # Slide 5: Scaling Laws (Fractal)
+    slide = prs.slides.add_slide(slide_layout)
+    title = slide.shapes.title
+    content = slide.placeholders[1]
+    title.text = "4. Universal Scaling Laws"
+    content.text = (
+        "One Formula from Atoms to Galaxies.\n\n"
+        "Scaling Coefficient:\n"
+        "α_scale = f(Size, Energy, Info Density)\n\n"
+        "• Quantum: Planck constant dependent.\n"
+        "• Human: Cognitive limit dependent (Ego/Emotion).\n"
+        "• Cosmic: Gravity/Speed of Light dependent.\n"
+        "• Structure is Invariant: I = V / R is the universal truth."
+    )
+
+    # Save the presentation
+    output_path = "Love_OS_Unified_Theory.pptx"
+    prs.save(output_path)
+    print(f"Presentation saved to {output_path}")
+
+if __name__ == "__main__":
+    create_presentation()
